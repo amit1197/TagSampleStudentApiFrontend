@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form onsubmit="getStudentByID()">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" required>
+        <button type="submit">Submit</button>
+    </form>
+    <button onclick = "getStudentByID()"> Fetch API to get data </button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>StudentId</th>
+                <th>Gender</th>
+                <th>NationalIty</th>
+                <th>PlaceofBirth</th>
+                <th>StageId</th>
+                <th>GradeId</th>
+                <th>SectionId</th>
+                <th>Topic</th>
+                <th>Semester</th>
+                <th>Relation</th>
+                <th>Raisedhands</th>
+                <th>VisItedResources</th>
+                <th>AnnouncementsView</th>
+                <th>Discussion</th>
+                <th>ParentAnsweringSurvey</th>
+                <th>ParentschoolSatisfaction</th>
+                <th>StudentAbsenceDays</th>
+                <th>StudentMarks</th>
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody id="userData"></tbody>
+    </table>
+
+    <div class="container">
+        <h1>Student Details Entry Form</h1>
+        <form id="studentForm" onsubmit="callApi(event)">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" required>
+
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" required>
+
+            <label for="PlaceofBirth">PlaceofBirth:</label>
+            <input type="text" id="PlaceofBirth" required>
+
+            <label for="StageID">StageID:</label>
+            <input type="text" id="StageID" required>
+
+            <label for="GradeID">GradeID:</label>
+            <input type="number" id="GradeID" required>
+
+            <label for="SectionID">SectionID:</label>
+            <input type="text" id="SectionID" required>
+
+            <label for="Topic">Topic:</label>
+            <input type="text" id="Topic" required>
+
+            <label for="Semester">Semester:</label>
+            <input type="text" id="Semester" required>
+
+            <label for="Relation">Relation:</label>
+            <input type="text" id="Relation" required>
+
+            <label for="raisedhands">raisedhands:</label>
+            <input type="number" id="raisedhands" required>
+
+            <label for="VisITedResources">VisITedResources:</label>
+            <input type="number" id="VisITedResources" required>
+
+            <label for="AnnouncementsView">AnnouncementsView:</label>
+            <input type="number" id="AnnouncementsView" required>
+
+            <label for="Discussion">Discussion:</label>
+            <input type="number" id="Discussion" required>
+
+            <label for="ParentAnsweringSurvey">ParentAnsweringSurvey:</label>
+            <input type="number" id="ParentAnsweringSurvey" required>
+
+            <label for="ParentschoolSatisfaction">ParentschoolSatisfaction:</label>
+            <input type="text" id="ParentschoolSatisfaction" required>
+
+            <label for="StudentAbsenceDays">StudentAbsenceDays:</label>
+            <input type="text" id="StudentAbsenceDays" required>
+
+            <label for="Student Marks">Student Marks:</label>
+            <input type="number" id="Student Marks" required>
+
+            <label for="Class">Class:</label>
+            <input type="text" id="Class" required>
+
+
+
+            <!-- ... Other attributes ... -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <script src="update.js"></script>
+</body>
+</html>

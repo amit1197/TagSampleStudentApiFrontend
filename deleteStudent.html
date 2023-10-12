@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Delete Student by ID</title>
+</head>
+<body>
+    <div id="output">   </div>
+    <!-- <div class="container"> -->
+        <h1>Enter Student ID</h1>
+        <form >
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" required>
+            <!--<button type="submit">Submit</button> -->
+        </form>
+    <!-- </div> -->
+    
+    <button onclick = "deleteStudentByID()"> Fetch API to delete student </button>
+
+    
+
+    <script >
+        
+        let output = document.getElementById('output');
+        
+
+        function deleteStudentByID() {
+            let sid = document.getElementById('studentId').value;
+            const stuid = sid;
+            console.log("HEllo");
+            console.log('sid',sid);
+            console.log('stuid',stuid);
+            fetch('http://localhost:5041/api/Student/Delete?student_Id=' + stuid,
+            {
+                method: 'DELETE',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: null
+            })
+            .then(response => response.json())
+            .then(data => {
+                
+                
+
+            })
+            
+
+        }
+    </script>
+</body>
+</html>
