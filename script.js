@@ -6,7 +6,7 @@ async function submitForm(event) {
     const gender = document.getElementById('gender').value;
     const nationality = document.getElementById('nationality').value;
     const placeOfBirth = document.getElementById('PlaceofBirth').value;
-    const stageID = document.getElementById('StageID').valu e;
+    const stageID = document.getElementById('StageID').value;
     const gradeID = document.getElementById('GradeID').value;
     const sectionID = document.getElementById('SectionID').value;
     const topic = document.getElementById('Topic').value;
@@ -52,7 +52,7 @@ async function submitForm(event) {
 
     // Make an HTTP POST request to your API endpoint
     try {
-        const response = await fetch('YOUR_API_ENDPOINT', {
+        const response = await fetch('http://localhost:5041/api/Student/Create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

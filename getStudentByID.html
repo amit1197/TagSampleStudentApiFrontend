@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Get Student Detail By ID</title>
+</head>
+<body>
+    <div id="output">   </div>
+    <!-- <div class="container"> -->
+        <h1>Enter Student ID</h1>
+        <form onsubmit="getStudentByID()">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" required>
+            <button type="submit">Submit</button>
+        </form>
+    <!-- </div> -->
+    
+    <button onclick = "getStudentByID()"> Fetch API to get data </button>
+
+    
+
+    <script >
+        
+        let output = document.getElementById('output');
+        
+
+        function getStudentByID() {
+            let sid = document.getElementById('studentId').value;
+            const stuid = sid;
+            console.log("HEllo");
+            fetch('http://localhost:5041/api/Student/GetbyID?student_Id=' + stuid)
+            .then(response => response.json())
+            .then(data => {
+                output.innerHTML += "id = " + data.studentId + "<br/>";
+                output.innerHTML += "gender = " + data.gender + "<br/>";
+                output.innerHTML += "NationalITy = " + data.nationalIty + "<br/>";
+                output.innerHTML += "PlaceofBirth = " + data.placeofBirth + "<br/>";
+                output.innerHTML += "StageID = " + data.stageId + "<br/>";
+                output.innerHTML += "GradeID = " + data.gradeId + "<br/>";
+                console.log('gradeID',data.GradeID);
+                console.log('gender',data.gender);
+                console.log('raisedhands',data.raisedhands);
+                console.log('random',data.random);
+                console.log(data.StudentId);
+
+            })
+            
+
+        }
+    </script>
+</body>
+</html>
